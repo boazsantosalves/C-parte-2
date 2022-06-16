@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <locale.h>
+#include <string.h>
+#include <math.h>
+
+/* Obter um vetor V de 20 posições. Mostrar o maior elemento do vetor V e a sua posição */
+
+int main(){
+    setlocale(LC_ALL, "Portuguese");
+
+    int i, a[]={1,2,3,4,5,6,7,8,9,10,11,55,13,14,15,16,17,18,19,0}, maior=-1, posicao;
+
+
+    for(i=0;i<20;i++){
+        if(a[i]>maior){
+            maior = a[i];
+            posicao = i;
+        }
+    }
+
+    printf("\nMaior número: %d",maior);
+    printf("\nPosição: %d",posicao);
+
+    return 0;
+}
