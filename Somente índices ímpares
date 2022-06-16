@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <locale.h>
+#include <string.h>
+#include <math.h>
+/* Definindo constante */
+#define constante 15;
+
+
+int main(){
+    setlocale(LC_ALL, "Portuguese");
+
+    int i, v[10];
+
+
+    for(i=0;i<10;i++){
+        printf("Digite um número: ");
+        scanf("%d",&v[i]);
+
+        if(i%2!=0){
+            v[i]=v[i]*constante;
+        }
+
+    }
+
+    for(i=0;i<10;i++){
+        printf("\nv[%d]: %d", i,v[i]);
+    }
+
+    return 0;
+}
