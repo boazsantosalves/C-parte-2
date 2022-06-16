@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <locale.h>
+#include <string.h>
+#include <math.h>
+
+/* Fazer um programa para ler uma string e um caracter qualquer. Calcular o número de ocorrências desse caracter na string.*/
+int main(){
+    setlocale(LC_ALL, "Portuguese");
+
+    char str1[50], a;
+    int cont=0,i;
+
+    printf("Digite uma frase qualquer: ");
+    fgets(str1, 49, stdin);
+    printf("Digite um caracter qualquer: ");
+    a = getchar();
+
+    for(i=0;str1[i]!='\0';i++){
+        if(str1[i]==a){
+            cont++;
+        }
+    }
+
+    printf("Quantidade de ocorrências: %d",cont);
+
+
+
+    return 0;
+}
