@@ -1,0 +1,118 @@
+#include <stdio.h>
+#include <locale.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+/* */
+int main(){
+    setlocale(LC_ALL, "Portuguese");
+
+    float v[12], maior=-273, menor=100;
+    int i, indice_maior, indice_menor;
+
+    for(i=0;i<12;i++){
+        printf("Digite a temperatura média no %dº mês do ano: ", i+1);
+        scanf("%f",&v[i]);
+
+        if(v[i]>maior){
+            maior = v[i];
+            indice_maior = i;
+        }
+
+        if(v[i]<menor){
+            menor = v[i];
+            indice_menor = i;
+        }
+    }
+
+    /* Identificando o mês com maior média */
+
+    switch(indice_maior) {
+        case 0:
+            printf("Maior temperatura: %.1f° em Janeiro",maior);
+            break;
+        case 1:
+            printf("Maior temperatura: %.1f° em Fevereiro",maior);
+            break;
+        case 2:
+            printf("Maior temperatura: %.1f° em Março",maior);
+            break;
+        case 3:
+            printf("Maior temperatura: %.1f° em Abril",maior);
+            break;
+        case 4:
+            printf("Maior temperatura: %.1f° em Maio",maior);
+            break;
+        case 5:
+            printf("Maior temperatura: %.1f° em Junho",maior);
+            break;
+        case 6:
+            printf("Maior temperatura: %.1f° em Julho",maior);
+            break;
+        case 7:
+            printf("Maior temperatura: %.1f° em Agosto",maior);
+            break;
+        case 8:
+            printf("Maior temperatura: %.1f° em Setembro",maior);
+            break;
+        case 9:
+            printf("Maior temperatura: %.1f° em Outubro",maior);
+            break;
+        case 10:
+            printf("Maior temperatura: %.1f° em Novembro",maior);
+            break;
+        case 11:
+            printf("Maior temperatura: %.1f° em Dezembro",maior);
+            break;
+        default:
+            printf("\nValor nao corresponde a nenhum mes!\n");
+    }
+    printf("\n");
+
+    /* Identificando o mês com menor média */
+
+    switch(indice_menor) {
+        case 0:
+            printf("Menor temperatura: %.1f° em Janeiro",menor);
+            break;
+        case 1:
+            printf("Menor temperatura: %.1f° em Fevereiro",menor);
+            break;
+        case 2:
+            printf("Menor temperatura: %.1f° em Março",menor);
+            break;
+        case 3:
+            printf("Menor temperatura: %.1f° em Abril",menor);
+            break;
+        case 4:
+            printf("Menor temperatura: %.1f° em Maio",menor);
+            break;
+        case 5:
+            printf("Menor temperatura: %.1f° em Junho",menor);
+            break;
+        case 6:
+            printf("Menor temperatura: %.1f° em Julho",menor);
+            break;
+        case 7:
+            printf("Menor temperatura: %.1f° em Agosto",menor);
+            break;
+        case 8:
+            printf("Menor temperatura: %.1f° em Setembro",menor);
+            break;
+        case 9:
+            printf("Menor temperatura: %.1f° em Outubro",menor);
+            break;
+        case 10:
+            printf("Menor temperatura: %.1f° em Novembro",menor);
+            break;
+        case 11:
+            printf("Menor temperatura: %.1f° em Dezembro",menor);
+            break;
+        default:
+            printf("\nValor não corresponde a nenhum mes!\n");
+    }
+
+
+    return 0;
+}
