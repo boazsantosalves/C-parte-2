@@ -8,7 +8,7 @@ int main(){
     setlocale(LC_ALL, "Portuguese");
 
     char str1[50], str2[50], a;
-    int cont=0,i,x;
+    int cont=0,i;
 
     printf("Digite uma frase: ");
     fgets(str1, 49, stdin);
@@ -21,7 +21,7 @@ int main(){
             cont++;
         }
     }
-
+    str2[cont]='\0';
     printf("Nova frase: %s",str2);
 
     return 0;
