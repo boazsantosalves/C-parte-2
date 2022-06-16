@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <locale.h>
+#include <string.h>
+#include <math.h>
+
+/* Faça um programa que receba uma frase e um caracter. O programa deverá retirar da frase todas as ocorrências do caracter*/
+int main(){
+    setlocale(LC_ALL, "Portuguese");
+
+    char str1[50], str2[50], a;
+    int cont=0,i,x;
+
+    printf("Digite uma frase: ");
+    fgets(str1, 49, stdin);
+    printf("Digite um caracter: ");
+    a = getchar();
+
+    for(i=0;str1[i]!='\0';i++){
+        if(str1[i]!=a){
+            str2[cont]=str1[i];
+            cont++;
+        }
+    }
+
+    printf("Nova frase: %s",str2);
+
+    return 0;
+}
