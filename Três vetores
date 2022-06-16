@@ -1,0 +1,21 @@
+#include <locale.h>
+#include <string.h>
+#include <math.h>
+
+
+int main(){
+    setlocale(LC_ALL, "Portuguese");
+
+    int i, a[]={1,1,1,1,1,1,1,1,1,1}, b[]={1,0,1,0,1,0,1,0,1,0}, c[10];
+
+
+    for(i=0;i<10;i++){
+        c[i]=a[i]+b[i];
+    }
+
+    for(i=0;i<10;i++){
+        printf("\nc[%d]: %d", i,c[i]);
+    }
+
+    return 0;
+}
